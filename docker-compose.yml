@@ -1,0 +1,45 @@
+version: '3'
+
+services:
+  app:
+    container_name: nestjs-app
+    build:
+      context: .
+      target: development
+    volumes:
+      - .:/home/node/app
+      - ./node_modules:/home/node/app/node_modules
+    ports:
+      - ${SERVER_PORT}:${SERVER_PORT}
+      - 3000:3000
+    entrypoint: dockerize -wait tcp://db:5432 -timeout 40s ./.docker/entrypoint.sh
+    env_file:
+      - .env
+    networks:
+      - webnet
+    depends_on:
+      - db
+    extra_hosts:
+      - 'host.docker.internal:172.17.0.1'
+
+  db:
+    container_name: postgres-database
+    build: .docker/postgres
+    networks:
+      - webnet
+    environment:
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_USER: ${DB_USERNAME}
+      PG_DATA: /var/lib/postgresql/data
+    ports:
+      - 5432:5432
+    volumes:
+      - ./.docker/dbdata:/var/lib/postgresql/data
+      - ./.docker/postgres:/docker-entrypoint-initdb.d
+    env_file:
+      - .env
+
+
+networks:
+  webnet:
+    driver: bridge
