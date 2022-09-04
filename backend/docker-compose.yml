@@ -5,14 +5,14 @@ services:
     container_name: nestjs-app
     build:
       context: .
-      target: development
+      target: production
     volumes:
       - .:/home/node/app
       - ./node_modules:/home/node/app/node_modules
     ports:
       - ${SERVER_PORT}:${SERVER_PORT}
       - 3000:3000
-    entrypoint: dockerize -wait tcp://db:5432 -timeout 40s ./.docker/entrypoint.sh
+    entrypoint: dockerize -wait tcp://db:5432 -timeout 40s .docker/entrypoints/prod.sh
     env_file:
       - .env
     networks:
@@ -38,7 +38,6 @@ services:
       - ./.docker/postgres:/docker-entrypoint-initdb.d
     env_file:
       - .env
-
 
 networks:
   webnet:

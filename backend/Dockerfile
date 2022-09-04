@@ -17,9 +17,9 @@ RUN yarn install
 
 COPY . .
 
-RUN yarn build
-
 FROM node:16-alpine as production
+
+RUN apk add --no-cache bash
 
 ENV DOCKERIZE_VERSION v0.6.1
 RUN wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSION/dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz \
@@ -40,5 +40,3 @@ RUN yarn install --production=false
 COPY . .
 
 COPY --from=development /home/node/app/dist ./dist
-
-CMD ["node", "dist/main"]
