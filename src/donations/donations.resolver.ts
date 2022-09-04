@@ -1,4 +1,5 @@
-import { Resolver, Query, Args, Mutation } from '@nestjs/graphql';
+import { Resolver, Query, Args, Mutation, Subscription } from '@nestjs/graphql';
+import { PubSub } from 'graphql-subscriptions';
 
 import { OrderByParams } from '../graphql';
 import { DonationsService } from './donations.service';
@@ -6,6 +7,7 @@ import { Donation } from './entities/donation.entity';
 
 import { DonationCreateInput } from '../@generated/prisma-nestjs-graphql/donation/donation-create.input';
 
+const pubSub = new PubSub();
 
 @Resolver('Donation')
 export class DonationsResolver {
@@ -37,7 +39,16 @@ export class DonationsResolver {
     const createNewDonation = await this.donationsService.createDonation(
       createDonationInput,
     );
+
+    const total = await this.donationsService.getTotal();
+    pubSub.publish('totalUpdated', { totalUpdated: { total } });
+
     return createNewDonation;
+  }
+
+  @Subscription()
+  async totalUpdated() {
+    return pubSub.asyncIterator('totalUpdated');
   }
 
   @Query('totalDonations')
