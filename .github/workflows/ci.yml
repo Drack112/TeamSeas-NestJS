@@ -24,7 +24,7 @@ jobs:
         run: yarn lint
 
       - name: 🛂 Setup the @generate folder to build
-        run: prisma generate
+        run: yarn prisma generate
 
       - name: 🚀 Build app
         run: yarn build
