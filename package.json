@@ -15,7 +15,7 @@
     "start": "nest start",
     "dev": "concurrently  \"yarn:start:dev\"  \"yarn:gen-typings\"  \"yarn:prisma:generate\" ",
     "start:dev": "nest start --watch",
-    "gen-typings": "ts-node ./src/shared/generate-typings.ts",
+    "gen-typings": "ts-node ./src/services/generate-typings.service.ts",
     "prisma:generate": "prisma generate --watch",
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main",
