@@ -18,7 +18,7 @@ datasource db {
 }
 
 model Donation {
-  id          String      @id @default(uuid())
+  id          String   @id @default(uuid())
   count       Int
   createdAt   DateTime @default(now())
   /// @Validator.MinLength(3)
