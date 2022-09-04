@@ -2,6 +2,7 @@ import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { GraphQLModule } from '@nestjs/graphql';
+import { ApolloServerPluginLandingPageLocalDefault } from 'apollo-server-core';
 import { GraphQLDateTime } from 'graphql-iso-date';
 
 import { DonationsModule } from './donations/donations.module';
@@ -13,8 +14,8 @@ import { DonationsModule } from './donations/donations.module';
     }),
     GraphQLModule.forRoot<ApolloDriverConfig>({
       driver: ApolloDriver,
-      debug: false,
-      playground: true,
+      plugins: [ApolloServerPluginLandingPageLocalDefault()],
+      playground: false,
       typePaths: ['./**/*.graphql'],
       resolvers: { DateTime: GraphQLDateTime },
       // Websocket

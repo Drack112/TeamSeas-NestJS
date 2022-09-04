@@ -13,10 +13,10 @@
   <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=8257E5&labelColor=000000">
 </p>
 
-
 <br>
 
 <a id="-tecnologias"></a>
+
 ## ✨ Tecnologias
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
@@ -29,6 +29,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
 
 <a id="-projeto"></a>
+
 ## 💻 Projeto
 
 Esse projeto é uma tentativa de fazer o backend do [TeamSeas](https://teamseas.org/) com as tecnologias mencionadas. Atualmente em desenvolvimento.
@@ -40,6 +41,7 @@ O Frontend não está no planejamento, porém está recebendo atenção.
 </p>
 
 <a id="-como-executar"></a>
+
 ## 🚀 Como executar
 
 ### 💻 Pré-requisitos
@@ -75,6 +77,7 @@ Entre no container e execute a migração de dados, usando o comando: `yarn pris
 Agora você pode acessar [localhost:8000/graphql](http://localhost:8000/graphql) do seu navegador.
 
 <a id="licença"></a>
+
 ## 📄 Licença
 
 Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
