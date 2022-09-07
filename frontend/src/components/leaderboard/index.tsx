@@ -12,7 +12,7 @@ export const Leaderboard = () => {
           donation={{
             displayName: "Mr Beast",
             count: 1000,
-            createdAt: "oof",
+            createdAt: "2022-09-07T17:39:05.579",
             team: "test",
             message: "Lesgo",
           }}
