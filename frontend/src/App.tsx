@@ -4,10 +4,10 @@ import * as React from "react"
 import { ChakraProvider, Box, Text, VStack, Grid, Heading, extendTheme } from "@chakra-ui/react"
 import { useQuery, useSubscription } from "urql"
 
+import { TotalDonationsQuery, TotalUpdatedQuery } from "./querys"
 import { Logo } from "./Logo"
 import { Counter } from "./components/donation/Counter"
-
-import { TotalDonationsQuery, TotalUpdatedQuery } from "./querys"
+import { Leaderboard } from "./components/leaderboard"
 
 const theme = extendTheme({
   fonts: {
@@ -43,6 +43,7 @@ export const App = () => {
             <Heading as='h2' size='4xl'>
               <Counter from={0} to={res.data || data.totalDonations} />
             </Heading>
+            <Leaderboard />
           </VStack>
         </Grid>
       </Box>
