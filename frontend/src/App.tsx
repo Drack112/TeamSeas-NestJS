@@ -1,7 +1,18 @@
+import "@fontsource/montserrat/700.css"
+import "@fontsource/montserrat/400.css"
+import "@fontsource/montserrat/300.css"
+
 import * as React from "react"
-import { ChakraProvider, Box, Text, VStack, Grid, theme, Heading } from "@chakra-ui/react"
+import { ChakraProvider, Box, Text, VStack, Grid, Heading, extendTheme } from "@chakra-ui/react"
 
 import { Logo } from "./Logo"
+
+const theme = extendTheme({
+  fonts: {
+    heading: "Montserrat",
+    body: "Montserrat",
+  },
+})
 
 export const App = () => (
   <ChakraProvider theme={theme}>
