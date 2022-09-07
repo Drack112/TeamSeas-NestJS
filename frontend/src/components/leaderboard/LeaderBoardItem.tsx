@@ -1,4 +1,6 @@
-import { Avatar, Badge, Box, Flex, Text } from "@chakra-ui/react"
+import { Avatar } from "@chakra-ui/avatar"
+import { Badge, Flex, Text } from "@chakra-ui/layout"
+import { Box } from "@chakra-ui/react"
 import React from "react"
 
 import { Donation } from "../../interfaces/Donation"
@@ -8,14 +10,13 @@ interface Props {
   donation: Donation
 }
 
-export const LeaderBoardItem = ({ donation }: Props) => {
+export const LeaderboardItem = ({ donation }: Props) => {
   return (
-    <Flex boxShadow='md' p={3} bg='white' borderRadius='lg' maxWidth='xl' w='100'>
+    <Flex boxShadow='md' p={3} bg='white' borderRadius='lg' maxWidth='xl' w='100%'>
       <Avatar size='lg' />
-
       <Box flex='1' ml={4}>
         <Flex justifyContent='space-between' h='100%'>
-          <Flex flexDirection='column' textAlign='left'>
+          <Flex flexDirection='column' justifyContent='center' textAlign='left'>
             <Text fontWeight='bold' color='blue.500' fontSize='sm' textTransform='uppercase'>
               {donation.team}
             </Text>
@@ -26,7 +27,7 @@ export const LeaderBoardItem = ({ donation }: Props) => {
           <Flex flexDirection='column' justifyContent='space-around' textAlign='right'>
             <div>
               <Badge
-                colorScheme='green'
+                colorScheme='blue'
                 borderRadius='full'
                 textTransform='lowercase'
                 py={1}
