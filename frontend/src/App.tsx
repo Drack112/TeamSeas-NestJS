@@ -1,6 +1,4 @@
-import "@fontsource/montserrat/700.css"
-import "@fontsource/montserrat/400.css"
-import "@fontsource/montserrat/300.css"
+import "./components/donation/fonts"
 
 import * as React from "react"
 import { ChakraProvider, Box, Text, VStack, Grid, Heading, extendTheme } from "@chakra-ui/react"
