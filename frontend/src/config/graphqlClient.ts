@@ -6,7 +6,7 @@ const wsClient = createWsClient({
   url: "ws://localhost:8000/graphql",
 })
 
-const client = createClient({
+const graphqlClient = createClient({
   url: "http://localhost:8000/graphql",
   exchanges: [
     ...defaultExchanges,
@@ -20,4 +20,4 @@ const client = createClient({
   ],
 })
 
-export { client }
+export { graphqlClient }
