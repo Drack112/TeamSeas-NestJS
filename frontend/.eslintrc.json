@@ -23,7 +23,8 @@
     "camelcase": "error",
     "spaced-comment": "error",
     "quotes": ["error", "double"],
-    "no-duplicate-imports": "error"
+    "no-duplicate-imports": "error",
+    "resolve": { "extensions": [".wasm", ".mjs", ".js", ".jsx", ".json"] }
   },
   "settings": {
     "import/resolver": {
