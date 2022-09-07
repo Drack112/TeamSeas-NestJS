@@ -1,59 +1,67 @@
-This project was bootstrapped with
-[Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+  <a href="http://nestjs.com/" target="blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/539px-React-icon.svg.png" width="200" alt="React Logo" /></a>
+</p>
 
-## Available Scripts
+<p align="center">
+  <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-como-executar">Como executar</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-licença">Licença</a>
+</p>
 
-In the project directory, you can run:
+<p align="center">
+  <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=8257E5&labelColor=000000">
+</p>
 
-### `yarn start`
+<br>
 
-Runs the app in the development mode.<br /> Open
-[http://localhost:3000](http://localhost:3000) to view it in the browser.
+<a id="-tecnologias"></a>
 
-The page will reload if you make edits.<br /> You will also see any lint errors
-in the console.
+## ✨ Tecnologias
 
-### `yarn test`
+Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-Launches the test runner in the interactive watch mode.<br /> See the section
-about
-[running tests](https://facebook.github.io/create-react-app/docs/running-tests)
-for more information.
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![Type-graphql](https://img.shields.io/badge/-TypeGraphQL-%23C04392?style=for-the-badge)
+![Chakra](https://img.shields.io/badge/chakra-%234ED1C5.svg?style=for-the-badge&logo=chakraui&logoColor=white)
+![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
+![Nginx](https://img.shields.io/badge/nginx-%23009639.svg?style=for-the-badge&logo=nginx&logoColor=white)
 
-### `yarn build`
+<a id="-projeto"></a>
 
-Builds the app for production to the `build` folder.<br /> It correctly bundles
-React in production mode and optimizes the build for the best performance.
+## 💻 Projeto
 
-The build is minified and the filenames include the hashes.<br /> Your app is
-ready to be deployed!
+Esse projeto é uma tentativa de fazer o frontend do [TeamSeas](https://teamseas.org/) com as tecnologias mencionadas.
 
-See the section about
-[deployment](https://facebook.github.io/create-react-app/docs/deployment) for
-more information.
+<p align="center">
+  <img alt="TeamSeas HomePage" src=".github/media/teamseas.png" width="100%">
+</p>
 
-### `yarn eject`
+<a id="-como-executar"></a>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## 🚀 Como executar
 
-If you aren’t satisfied with the build tool and configuration choices, you can
-`eject` at any time. This command will remove the single build dependency from
-your project.
+### 💻 Pré-requisitos
 
-Instead, it will copy all the configuration files and the transitive
-dependencies (webpack, Babel, ESLint, etc) right into your project so you have
-full control over them. All of the commands except `eject` will still work, but
-they will point to the copied scripts so you can tweak them. At this point
-you’re on your own.
+Antes de começar, verifique se você atendeu aos seguintes requisitos:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for
-small and middle deployments, and you shouldn’t feel obligated to use this
-feature. However we understand that this tool wouldn’t be useful if you couldn’t
-customize it when you are ready for it.
+- Você instalou a versão mais recente de `< Docker & Node>`
+- Você tem uma máquina `< Windows / Linux / Mac >`.
+- Você possui um `< Editor de código ou IDE / Gerenciador de banco de dados >`.
 
-## Learn More
+### Se lembre de ter o Docker rodando :ocean:
 
-You can learn more in the
-[Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+E então, rode o comando `docker-compose up --build -V`.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Agora você pode acessar [localhost:8000/graphql](http://localhost:3000) do seu navegador.
+
+<a id="licença"></a>
+
+## 📄 Licença
+
+Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](../LICENSE.md) para mais detalhes.
+
+---
+
+#### _Sinta-se livre para colaborar, toda ajuda é bem vinda ;)_

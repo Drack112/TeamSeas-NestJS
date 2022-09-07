@@ -32,9 +32,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
-Esse projeto é uma tentativa de fazer o backend do [TeamSeas](https://teamseas.org/) com as tecnologias mencionadas. Atualmente em desenvolvimento.
-
-O Frontend não está no planejamento, porém está recebendo atenção.
+Esse projeto é uma tentativa de fazer o backend do [TeamSeas](https://teamseas.org/) com as tecnologias mencionadas.
 
 <p align="center">
   <img alt="TeamSeas HomePage" src=".github/media/teamseas.png" width="100%">
