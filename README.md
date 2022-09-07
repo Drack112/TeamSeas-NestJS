@@ -2,6 +2,8 @@
 
 ### **"Repositório com função de armazenar o código do projeto de clone do site TeamSeas, apenas para fins educacionais"**
 
+Foco: NestJS
+
 <br/>
 
 ## 🔖 Licença
