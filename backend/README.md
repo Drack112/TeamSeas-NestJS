@@ -61,8 +61,10 @@ SERVER_PORT=
 # Postgres
 DB_USERNAME=
 DB_PASSWORD=
+DB_NAME=graphql
 
-DATABASE_URL="postgresql://postgres:root@db:5432/postgres?schema=public"
+# Mude para DATABASE_URL e siga o formato abaixo
+EXAMPLE_DATABASE_URL="postgresql://name:password@db:5432/name_of_database?schema=public"
 
 ```
 
