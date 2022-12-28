@@ -2,18 +2,17 @@ version: '3'
 
 services:
   app:
-    container_name: nestjs-app-development
+    container_name: nestjs-app-production
     image: drack112/teamseas-nestjs
     build:
       context: .
-      target: development
+      target: production
     volumes:
       - .:/home/node/app
       - ./node_modules:/home/node/app/node_modules
     ports:
       - ${SERVER_PORT}:${SERVER_PORT}
       - 3000:3000
-    entrypoint: dockerize -wait tcp://db:5432 -timeout 40s .docker/entrypoints/dev.sh
     env_file:
       - .env
     networks:
@@ -24,7 +23,7 @@ services:
       - 'host.docker.internal:172.17.0.1'
 
   db:
-    container_name: postgres-database-development
+    container_name: postgres-database-production
     build: .docker/postgres
     networks:
       - webnet

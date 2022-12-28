@@ -36,5 +36,7 @@ COPY package.json yarn.lock ./
 RUN yarn install --production=true
 
 COPY tsconfig.json tsconfig.build.json ./
-
+COPY prisma ./
 COPY --from=development /home/node/app/dist ./dist
+
+CMD ["yarn", "docker:prod"]

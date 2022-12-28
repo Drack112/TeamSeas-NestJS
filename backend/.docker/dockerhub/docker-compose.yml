@@ -2,18 +2,12 @@ version: '3'
 
 services:
   app:
-    container_name: nestjs-app-development
+    container_name: nestjs-app-contaner
     image: drack112/teamseas-nestjs
-    build:
-      context: .
-      target: development
-    volumes:
-      - .:/home/node/app
-      - ./node_modules:/home/node/app/node_modules
     ports:
       - ${SERVER_PORT}:${SERVER_PORT}
       - 3000:3000
-    entrypoint: dockerize -wait tcp://db:5432 -timeout 40s .docker/entrypoints/dev.sh
+    command: 'yarn docker:prod'
     env_file:
       - .env
     networks:
@@ -24,8 +18,8 @@ services:
       - 'host.docker.internal:172.17.0.1'
 
   db:
-    container_name: postgres-database-development
-    build: .docker/postgres
+    container_name: postgres-database
+    build: ../postgres
     networks:
       - webnet
     environment:
@@ -35,8 +29,8 @@ services:
     ports:
       - 5432:5432
     volumes:
-      - ./.docker/dbdata:/var/lib/postgresql/data
-      - ./.docker/postgres:/docker-entrypoint-initdb.d
+      - ./../dbdata:/var/lib/postgresql/data
+      - ./../postgres:/docker-entrypoint-initdb.d
     env_file:
       - .env
 
