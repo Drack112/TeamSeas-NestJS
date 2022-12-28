@@ -18,6 +18,8 @@ import { DonationsModule } from './donations/donations.module';
       playground: false,
       typePaths: ['./**/*.graphql'],
       resolvers: { DateTime: GraphQLDateTime },
+      persistedQueries: false,
+      cache: 'bounded',
       // Websocket
       subscriptions: {
         'graphql-ws': true,
